@@ -14,11 +14,11 @@ var DB *sql.DB
 
 // Config variables
 var (
-	server   = "127.0.0.1"
-	port     = 3306
+	server   = "shinkansen.proxy.rlwy.net"
+	port     = 27390
 	user     = "root"
-	password = ""
-	database = "books"
+	password = "JCmWAeGIJwTBJIJlCYytPidLCiSAzclD"
+	database = "railway"
 )
 
 // Conn initializes and returns a MySQL database connection
@@ -42,12 +42,13 @@ func Conn() (*sql.DB, error) {
 		return nil, err
 	}
 
-	// Optionally store the connection globally
+	// Store the connection globally
 	DB = db
+
+	fmt.Println("✅ Database connected successfully!")
 
 	return db, nil
 }
-
 func IdExists(booking_id string) (bool, error) {
 	db, _ := Conn()
 
