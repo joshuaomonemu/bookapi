@@ -1,4 +1,4 @@
-# Book Project 📚  
+# Booking Flow Mini-Project  
 
 This is a Golang-based project that provides a structured backend for handling bookings, authentication, cards, and related services. The project is modularized into routes, handlers, models, services, utilities, and database connection management.
 
@@ -17,7 +17,7 @@ Book/
 │
 ├── handlers/
 │   ├── .env                # Environment variables file
-│   └── cards.go            # Request handlers for cards
+│   └── cards.go            # Request handlers for bookings
 │
 ├── models/
 │   └── auth_struct.go      # Structs for authentication
@@ -69,7 +69,7 @@ go run main.go
 ## ⚡ Features  
 
 - **Database Connection** – Centralized in `db/conn.go`.  
-- **Card Handlers** – API endpoints for managing cards (`handlers/cards.go`).  
+- **Booking Handlers** – API endpoints for managing cards (`handlers/booking.go`).  
 - **Authentication Models** – Structs to define auth payloads (`models/auth_struct.go`).  
 - **Booking Services** – Handles business logic for bookings (`services/booking.go`).  
 - **Routing** – Managed in `routes/routes.go`.  
@@ -80,14 +80,14 @@ go run main.go
 ## 🛠️ Tech Stack  
 
 - **Language**: Go (Golang)  
-- **Database**: MySQL / PostgreSQL (based on `.env` config)  
+- **Database**: MySQL (based on `.env` config)  
 - **Architecture**: RESTful service with modularized packages  
 
 ---
 
 ## 📌 TODOs  
 
-- Add JWT authentication middleware  
+- Add Key authentication middleware  
 - Improve error handling with structured responses  
 - Write unit tests for services and handlers  
 - Add Dockerfile for containerized deployment  
